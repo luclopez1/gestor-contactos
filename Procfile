@@ -1,2 +1,2 @@
-web gunicorn gestor_contactosapp
+web gunicorn gestor_contactos:app
 
