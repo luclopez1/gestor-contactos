@@ -61,7 +61,6 @@ def eliminar_contacto(indice):
 # ----------------------------------------------------------
 @app.route("/")
 def index():
-    inicializar_excel()
     contactos = leer_contactos()
     total = len(contactos)
 
@@ -75,9 +74,9 @@ def index():
             <td>{c['email']}</td>
             <td>
                 <a href="/eliminar/{i}" 
-                   onclick="return confirm('Eliminar a {c['nombre']}?')"
+                   onclick="return confirm('¿Eliminar a {c['nombre']}?')"
                    style="color:#e74c3c;text-decoration:none;font-weight:bold">
-                   X Eliminar
+                   ✕ Eliminar
                 </a>
             </td>
         </tr>
